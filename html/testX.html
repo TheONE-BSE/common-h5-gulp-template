@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .con{
+      width: 40px;
+      height: 40px;
+      position: relative;
+    }
+    .line{
+      width: 20px;
+      height: 1px;
+      background: black;
+      position: absolute;
+      top: 50%;
+      opacity: 1;
+      transition: opacity .3s;
+    }
+    .con:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background: black;
+      transform-origin: left;
+      transition: transform .3s, width .3s;
+    }
+    .con:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background: black;
+      transform-origin: left;
+      transition: transform .3s, width .3s;
+    }
+    .con:hover:after{
+      transform: rotate(-45deg);
+      width: 56.569px;
+    }
+    .con:hover:before{
+      transform: rotate(45deg);
+      width: 56.569px;
+    }
+    .con:hover .line{
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="con">
+    <div class="line"></div>
+  </div>
+</body>
+</html>
