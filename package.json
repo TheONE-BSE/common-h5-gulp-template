@@ -26,5 +26,10 @@
     "less-plugin-functions": "^1.0.0",
     "pump": "^3.0.0",
     "vconsole": "^3.1.0"
-  }
+  },
+  "browserslist": [
+    ">1%",
+    "last 10 version",
+    "iOS >= 8"
+  ]
 }

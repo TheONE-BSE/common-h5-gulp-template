@@ -38,13 +38,7 @@ function style(callback) {
     less({
       plugins: [lessPluginFunctions]
     }),
-    autoprefixer({
-      browsers: [
-        '>1%',
-        'last 10 version',
-        'iOS >= 8'
-      ]
-    }),
+    autoprefixer(),
     cleancss(),
     sourcemaps.write('maps'),
     gulp.dest(path.join(__dirname, paths.style.dest)),
